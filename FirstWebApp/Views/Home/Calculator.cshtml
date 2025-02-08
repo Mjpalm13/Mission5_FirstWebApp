@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Tutoring Calculator";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css"> <!-- Link to CSS -->
+</head>
+<body>
+<header>
+    <h1>Hobby Tutoring Cost Calculator</h1>
+</header>
+
+<section>
+    <label for="hours">Enter Hours Needed:</label>
+    <input type="number" id="hours" min="1">
+        
+    <p>Hourly Rate: <strong>$20</strong></p> <!-- Fixed rate -->
+        
+    <button id="calculateBtn">Calculate</button>
+        
+    <p>Total Cost: <span id="totalCost">$0</span></p>
+</section>
+
+<footer>
+    <p>&copy; @DateTime.Now.Year Madison Palmer</p>
+    <a href="@Url.Action("Index", "Home")">Back to Home</a>
+</footer>
+
+<!-- ✅ Scripts should be at the bottom -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+<script src="~/js/calculator.js"></script> <!-- Custom JS -->
+</body>
+</html>

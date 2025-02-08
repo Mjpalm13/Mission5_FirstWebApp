@@ -1,8 +1,30 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Hiking & Photography";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css"> <!-- Link to your CSS -->
+</head>
+<body>
+<header>
+    <h1>Welcome to My Hiking & Photography Page</h1>
+</header>
+
+<section>
+    <img src="~/images/hiking.jpg" alt="Hiking Adventure" width="400">
+    <img src="~/images/landscape.jpg" alt="Landscape Photography" width="400">
+
+    <p>I love exploring nature and capturing breathtaking landscapes through photography.</p>
+    <p>Hiking allows me to reach beautiful spots, and photography helps me share those moments.</p>
+</section>
+
+<footer>
+    <p>&copy; @DateTime.Now.Year Madison Palmer</p>
+    <a href="@Url.Action("Calculator", "Home")">Go to Calculator</a>
+</footer>
+</body>
+</html>
