@@ -1,13 +1,19 @@
 $(document).ready(function () {
-    $("#calculateBtn").click(function () {
-        let hours = parseFloat($("#hours").val());
-        let rate = 20; // $20 per hour
+    $("#calculate").click(function () {
+        var hours = $("#hours").val();
+        var rate = $("#rate").val();
 
-        if (isNaN(hours) || hours <= 0) {
-            alert("Please enter a valid positive number.");
+        // Validate input
+        if (hours <= 0 || isNaN(hours)) {
+            $("#error-message").show();
+            $("#total").val("");
+            return;
         } else {
-            let total = hours * rate;
-            $("#totalCost").text(`$${total.toFixed(2)}`);
+            $("#error-message").hide();
         }
+
+        // Calculate total
+        var total = hours * rate;
+        $("#total").val("$" + total.toFixed(2));
     });
 });

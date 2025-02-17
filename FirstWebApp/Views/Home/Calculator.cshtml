@@ -2,37 +2,31 @@
     ViewData["Title"] = "Tutoring Calculator";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/site.css"> <!-- Link to CSS -->
-</head>
-<body>
-<header>
-    <h1>Hobby Tutoring Cost Calculator</h1>
-</header>
+<h2>Landscape Photography Tutoring Calculator</h2>
 
-<section>
-    <label for="hours">Enter Hours Needed:</label>
-    <input type="number" id="hours" min="1">
-        
-    <p>Hourly Rate: <strong>$20</strong></p> <!-- Fixed rate -->
-        
-    <button id="calculateBtn">Calculate</button>
-        
-    <p>Total Cost: <span id="totalCost">$0</span></p>
-</section>
+<div>
+    <label for="hours">Enter the number of hours you need:</label>
+    <input type="number" id="hours" min="1" required>
+    <span id="error-message" style="color: red; display: none;">Please enter a positive number.</span>
+</div>
 
-<footer>
-    <p>&copy; @DateTime.Now.Year Madison Palmer</p>
-    <a href="@Url.Action("Index", "Home")">Back to Home</a>
-</footer>
+<div>
+    <label for="rate">Rate per Hour:</label>
+    <input type="text" id="rate" value="20" readonly>
+</div>
 
-<!-- ✅ Scripts should be at the bottom -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
-<script src="~/js/calculator.js"></script> <!-- Custom JS -->
-</body>
-</html>
+<div>
+    <button id="calculate">Calculate Total</button>
+</div>
+
+<div>
+    <label for="total">Total Cost:</label>
+    <input type="text" id="total" readonly>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Back to Home</a>
+</div>
+
+<!-- Link to your JavaScript file -->
+<script src="~/js/calculator.js"></script>

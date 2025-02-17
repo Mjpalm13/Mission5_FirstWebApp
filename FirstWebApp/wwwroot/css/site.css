@@ -1,5 +1,68 @@
+/* Base Styles */
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.page-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+}
+
+/* Content Section */
+.content {
+  padding: 20px;
+}
+
+/* Images */
+.image {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Button link */
+.button-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.button-link:hover {
+  background-color: #2980b9;
+}
+
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,15 +71,81 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #0056b3; /* Dark blue background */
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important; /* Gold hover effect */
+}
+
+/* Buttons */
+.btn {
+  background-color: #0056b3; /* Match navbar color */
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004494; /* Slightly darker shade */
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
