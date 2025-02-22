@@ -12,7 +12,7 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
+    /* added my routes to new privacy page and the calculator */
     public IActionResult Index()
     {
         return View();

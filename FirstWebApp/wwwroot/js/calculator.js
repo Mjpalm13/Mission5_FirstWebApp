@@ -3,7 +3,7 @@ $(document).ready(function () {
         var hours = $("#hours").val();
         var rate = $("#rate").val();
 
-        // Validate input
+        // Checking if the input is valid
         if (hours <= 0 || isNaN(hours)) {
             $("#error-message").show();
             $("#total").val("");
@@ -12,7 +12,7 @@ $(document).ready(function () {
             $("#error-message").hide();
         }
 
-        // Calculate total
+        // Calculating the total
         var total = hours * rate;
         $("#total").val("$" + total.toFixed(2));
     });
